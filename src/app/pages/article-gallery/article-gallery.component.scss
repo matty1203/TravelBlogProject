@@ -1,0 +1,29 @@
+.row {
+  width: 100%;
+  --bs-gutter-x: 0px;
+}
+
+.image {
+  padding: 12px;
+
+  &-placeholder {
+    width: 100%;
+    position: relative;
+    height: 25vh !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // background-image: url("https://i.pinimg.com/originals/83/64/66/83646654668bf9ae412f45bb2e417ddf.jpg");
+  }
+
+  &-footer {
+    text-align: left;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 6px;
+    color: white;
+    background-color: rgba(65, 63, 63, 0.377);
+  }
+}

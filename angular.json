@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,9 +93,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
+             
             ],
-            "scripts": []
+            "scripts":  []
           }
         },
         "lint": {
@@ -123,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TravelBlogFrontend"
+    }
+  },
+  "defaultProject": "TravelBlogFrontend",
+  "cli": {
+    "analytics": "5fb6150a-7cf8-4979-9d01-45eb77a655c6"
+  }
 }

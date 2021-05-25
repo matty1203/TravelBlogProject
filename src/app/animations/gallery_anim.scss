@@ -1,0 +1,16 @@
+@keyframes moveSlideshow {
+  0% {
+    //   transform: translateX(-66.6666%);
+    left: 0%
+  }
+
+  50% {
+    // transform: translateX(-66.6666%);  
+    left: 50%;
+  }
+
+  100% {
+    // transform: translateX(-66.6666%);  
+    left: 100%;
+  }
+}

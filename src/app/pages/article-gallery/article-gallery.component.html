@@ -1,0 +1,10 @@
+<section style="padding: 1rem;text-align: center;">
+ <div class="row">
+    <div *ngFor="let img of images" class="col-sm-3 image">
+      <div class="image-placeholder" [ngStyle]="{'background-image': 'url('+img.url +')'}">
+          <div class="image-footer">{{img?.name}} </div>
+      </div>
+    </div>
+
+  </div>   
+</section>

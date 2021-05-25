@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <header class="row">
+    <div class="menu col-sm-9">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Destinations</a>
+        </li>
+        <li>
+          <a href="#">Terms</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="searchbar col-sm-3">
+      <mat-form-field appearance="outline">
+        <input type="tel" matInput placeholder="Search Locations" autocomplete="off">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="banner-top row ">
+      <div class="text_box col-sm-4">
+        <div class="text_box--content">
+          <h1>Navigate <br> the world</h1>
+          <p>&nbsp;All the information in one place</p>
+        </div>
+
+      </div>
+      <div class="slider col-sm-8">
+        <div class="slider-inner">
+          <div class="item" *ngFor="let img of images">
+            <section class="item--header">{{img.name}}</section>
+            <div class="item--image" [ngStyle]="{'background-image': 'url('+img.url +')'}">  </div>
+            <!-- <img  class="item--image" [src]="img.url"> -->
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
