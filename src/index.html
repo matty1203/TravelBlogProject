@@ -54,19 +54,18 @@
         autoplaySpeed: 1400,
         speed: 1400,
         focusOnSelect: true,
-        responsive: [
-                            {
-                              breakpoint: 800,
-                              settings: {
-                                slidesToShow: 1,
-                                dots: true,
-                                slidesToScroll: 1
-                              }
-                            }
+        responsive: [{
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1,
+              dots: true,
+              slidesToScroll: 1
+            }
+          }
 
-                          ]
+        ]
       });
-      $('.slick-track').css("height","60vh");
+      $('.slick-track').css("height", "60vh");
       // On before slide change
       $('.slider-inner').on('beforeChange', function (event, {
         slideCount: count
@@ -76,11 +75,24 @@
         let prev = [currentSlide, currentSlide - count, currentSlide + count].map(n =>
             `[data-slick-index="${n}"]`)
           .join(', ');
+
+        let anim_slide = [currentSlide - 1, currentSlide + 3, currentSlide + count].map(n =>
+
+            `[data-slick-index="${n}"]`)
+          .join(', ');
+
+
+        // $(selectors).css("opacity", "1");
         $(prev).css("transform", "scale(0.68)");
         $(selectors).css("transform", "scale(0.8)");
-        
+        $(`[data-slick-index="${currentSlide}"]`).css("transition", "all 0.45s");
 
+        $(`[data-slick-index="${currentSlide}"]`).css("opacity", "0");
+        $(anim_slide).css("opacity", "1");
+        // $(selectors).css("opacity", "0");
       });
+
+
 
       // $('[data-slick-index="0"]').addClass('slick-now');
       $('[data-slick-index="0"]').css("transform", "scale(0.8)");

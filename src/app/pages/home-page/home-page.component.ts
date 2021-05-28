@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  images:any=[{id:1,url:"./assets/images/Mountain.jpg",name:"Rohit Punnen"},
+  images:any=[{id:1,url:"./assets/images/Mountain1.jpg",name:"Rohit Punnen"},
   {id:1,url:"./assets/images/Mountain4.jpg",name:"Abhi Thomas"},
   {id:1,url:"./assets/images/Mountain2.jpg",name:"Unknown"},
   {id:1,url:"./assets/images/Mountain3.jpg",name:"Clara R"},
