@@ -17,14 +17,40 @@ header {
   width: 100%;
   z-index: 99;
   max-height: 10vh;
+  position: relative;
 
   .searchbar {
     display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
 
-    mat-form-field {
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 100%;
+    .input-group {
+      display: flex;
+      border: 1px solid black;
+      padding: 2px;
+      border-radius: 24px;
+
+      &--box {
+        input {
+          margin-left: 4px;
+        }
+
+        padding: 4px;
+      }
+
+      &--icon {
+        display: flex;
+        padding-right: 4px;
+
+        span {
+          margin: auto;
+        }
+      }
+      &:hover{
+        border: 2px solid green;
+
+      }
     }
 
   }
@@ -34,7 +60,8 @@ header {
 .menu ul li {
   list-style: none;
   display: inline-block;
-  margin: 20px;
+  margin: 2rem;
+
 
   a {
     position: relative;
@@ -46,23 +73,26 @@ header {
 
     &::before {
       position: absolute;
-      content: '';
-      top: 2rem;
-      bottom: 0.5rem;
-      left: 40%;
-      height: 0.8rem;
-      width: 0.8rem;
+      font-family: "Material Icons";
       background-color: white;
-      border-radius: 100%;
-      border: 2px solid black;
-      transition: all ease 0.5s;
+      text-shadow: 3px 3px 5px rgba(110, 108, 108, 0.281);
+      content: "\e0c8";
+      font-size: 1.5rem;
+      top: 1.6rem;
+      bottom: 0.5rem;
+      // width: inherit;
+      // text-align: center;
+      left: 30%;
+      // transform: translateX(70%);
+      transition: all ease 0.3s;
 
 
     }
 
     &:hover {
       &::before {
-        background-color: black;
+        text-shadow: 3px 3px 5px rgba(128, 226, 90, 0.281);
+        color: green;
       }
 
     }
@@ -72,7 +102,10 @@ header {
 .menu ul {
 
   padding-left: 0px !important;
-  border-bottom: 1px solid black;
+  text-align: center;
+
+  // border-bottom: 2px dotted red ;
+  // border-bottom: 1px solid black;
 
 }
 
@@ -104,6 +137,22 @@ header {
     &--content {
       text-align: left;
       margin: auto;
+      
+
+      button{
+        padding-left:2rem;
+        padding-right: 2rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: rgb(144, 21, 231);
+        border-radius: 24px;
+        color: white;
+        letter-spacing: 0.4rem;
+        outline: none;
+        font-size: 1.5rem;
+        width: 90%;
+        font-weight: bolder;
+      }
     }
 
     p {
