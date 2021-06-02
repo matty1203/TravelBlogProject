@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-article-gallery',
@@ -12,9 +13,13 @@ export class ArticleGalleryComponent implements OnInit {
   {id:1,url:"https://www.irishtimes.com/polopoly_fs/1.4513148.1616011727!/image/image.jpg_gen/derivatives/landscape_490/image.jpg",name:"Clara R"},
   {id:1,url:"https://neilpatel.com/wp-content/uploads/2017/09/image-editing-tools.jpg",name:"Rahul S"},
   {id:1,url:"https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",name:"Trevor Noah"}]
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  home(){
+    this.router.navigate(['/home'])
+
+  }
 }

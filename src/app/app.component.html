@@ -1,34 +1,40 @@
 <div class="wrapper">
-    <header class="row">
-      <div class="menu col-sm-12">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Destinations</a>
-          </li>
-          <li>
-            <a href="#">Terms</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-  
-      </div>
-      <div class="searchbar ">
-        <div class="input-group">
-          <div class="input-group--box">
-            <input style="outline: none;border: none;" placeholder="Search Locations">
-          </div>
-          <div class="input-group--icon">
-            <span class="material-icons">
-              search
-            </span>
-          </div>
+  <header class="row">
+    <div class="col-sm-3 logo" style="display: flex;">
+      <span style="margin-top:auto ;margin-bottom: auto;">COMPANY</span>
+    </div>
+    <div class="menu col-sm-6">
+      <ul>
+        <li>
+          <a href="/home">Home</a>
+        </li>
+        <li>
+          <a href="#">Destinations</a>
+        </li>
+        <li>
+          <a href="#">Terms</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="searchbar col-sm-3 ">
+      <div class="input-group">
+        <div class="input-group--box">
+          <input style="outline: none;border: none;" placeholder="Search Locations">
+        </div>
+        <div class="input-group--icon">
+          <span class="material-icons">
+            search
+          </span>
         </div>
       </div>
-    </header>
-<router-outlet></router-outlet>
+    </div>
+  </header>
+  <div class="content">
+
+    <router-outlet></router-outlet>
+  </div>
 </div>

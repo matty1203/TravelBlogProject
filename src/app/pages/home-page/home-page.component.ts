@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -15,12 +16,25 @@ export class HomePageComponent implements OnInit {
  
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
 
-  constructor() { }
+  constructor(private router:Router) { 
+    localStorage.setItem('home_load','1')
+
+    // window.location.reload()
+  }
 
   ngOnInit(): void {
+    // window.reload
+    // this.reloadComponent();
   }
-  slickInit(e) {
-    console.log('slick initialized');
-    
-  }
+ onSlideClick(id:any){
+
+  localStorage.setItem('home_load','0')
+  this.router.navigate(['/article-home'])
+
+ }
+
+
+
+
+
 }

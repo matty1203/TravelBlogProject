@@ -6,15 +6,19 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [{
   path:'',
-  redirectTo: 'gallery',
+  redirectTo: 'home',
   pathMatch: 'full'
 },
 {
-  path:"app-home",
-  component:ArticleHomePageComponent
-},{
   path:"home",
   component:HomePageComponent
+},
+{
+  path:"article-home",
+  component:ArticleHomePageComponent,
+  loadChildren: () =>
+  
+  import("./pages/article-home-page/article-home-page.module").then((m) => m.ArticleHomePageModule,),
 },
 {
   path:"gallery",

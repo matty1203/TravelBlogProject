@@ -18,7 +18,7 @@
         <div class="slider-inner">
           <div class="item" *ngFor="let img of images">
             <section class="item--header">{{img.name}}</section>
-            <div class="item--image" [ngStyle]="{'background-image': 'url('+img.url +')'}"> </div>
+            <div class="item--image" [ngStyle]="{'background-image': 'url('+img.url +')'}" (click)="onSlideClick()"> </div>
             <!-- <img  class="item--image" [src]="img.url"> -->
           </div>
         </div>
