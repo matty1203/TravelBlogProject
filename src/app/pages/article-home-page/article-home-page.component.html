@@ -43,8 +43,8 @@
 </section> -->
 
 <div class="content">
-  <div class="row">
-    <div class="col-sm-3">
+  <div class="row" style="height: 84vh;">
+    <div class="col-sm-3" style="height: 100%;">
       <div class="menu">
         <p class="heading" (click)="toLandingPage()">
           {{data?.name}}
@@ -60,8 +60,8 @@
       </div>
 
     </div>
-    <div class="col-sm-9">
-      <router-outlet></router-outlet>
+    <div class="col-sm-9" style="height: 100%;padding-top: 1.5rem;"  >
+      <router-outlet ></router-outlet>
     </div>
   </div>
 </div>

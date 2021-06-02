@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
+import{slideUpAnimation} from './content_animation'
 @Component({
   selector: 'app-article-home-page',
   templateUrl: './article-home-page.component.html',
   styleUrls: ['./article-home-page.component.scss'],
+  animations: [
+    slideUpAnimation
+  ],
   providers: [NgbCarouselConfig]
 })
 export class ArticleHomePageComponent implements OnInit {
@@ -22,15 +26,13 @@ menu:any=[{id:1,name:"Geographic Location",url:"/article-home/geographic-locatio
 {id:1,name:"Feature Videos",url:"/article-home/article-landing"}]
 
 
-  constructor(config: NgbCarouselConfig,private router:Router) {
-    // customize default values of carousels used by this component tree
-    config.interval = 10000;
-    config.wrap = false;
-    config.keyboard = false;
-    config.pauseOnHover = false;
+  constructor(private router:Router) {
+
   }
   ngOnInit(): void {
   }
+
+  
   scrollTo(){
     var elmnt = document.getElementById("intro3");
     elmnt.scrollIntoView();
@@ -43,5 +45,9 @@ menu:any=[{id:1,name:"Geographic Location",url:"/article-home/geographic-locatio
    
   this.router.navigate(['/article-home/article-landing'])
  }
+ prepareRoute(outlet: RouterOutlet) {
+  return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+}
+
 
 }

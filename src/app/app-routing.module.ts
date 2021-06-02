@@ -11,14 +11,14 @@ const routes: Routes = [{
 },
 {
   path:"home",
-  component:HomePageComponent
+  component:HomePageComponent,data: {animation: 'HomePage'}
 },
 {
   path:"article-home",
   component:ArticleHomePageComponent,
   loadChildren: () =>
   
-  import("./pages/article-home-page/article-home-page.module").then((m) => m.ArticleHomePageModule,),
+  import("./pages/article-home-page/article-home-page.module").then((m) => m.ArticleHomePageModule,),data: {animation: 'ArticleHomePage'}
 },
 {
   path:"gallery",
