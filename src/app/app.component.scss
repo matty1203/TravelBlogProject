@@ -5,34 +5,35 @@
 
 }
 
+.row {
+  // height: 86vh;
+  width: 100%;
+  --bs-gutter-x: 0px;
+}
+
 .wrapper {
   height: 100%;
 }
 
 header {
   padding: 8px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  width: 100%;
   z-index: 99;
-  max-height: 10vh;
   position: relative;
 
   .searchbar {
     display: flex;
-    position: absolute;
-    right: 1rem;
-    top: 2.5rem;
+    background-color: white;
 
     .input-group {
       display: flex;
+      margin: auto;
       border: 1px solid black;
       padding: 2px;
       border-radius: 24px;
 
       &--box {
-          width: 85%;
+        width: 85%;
+
         input {
           margin-left: 4px;
         }
@@ -41,7 +42,7 @@ header {
       }
 
       &--icon {
-          width: 15%;
+        width: 15%;
         display: flex;
 
         span {
@@ -59,11 +60,10 @@ header {
 
 }
 
-.menu ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 2rem;
 
+
+.menu {
+  text-align: center;
 
   a {
     position: relative;
@@ -81,40 +81,46 @@ header {
       content: "\e0c8";
       font-size: 1.5rem;
       top: 1.6rem;
-      bottom: 0.5rem;
-      // width: inherit;
-      // text-align: center;
-      left: 30%;
-      // transform: translateX(70%);
+      left: 27%;
       transition: all ease 0.3s;
-
-
     }
 
-    &:hover {
+    &:hover::before {
+      text-shadow: 3px 3px 5px rgba(128, 226, 90, 0.281);
+      color: green;
+    }
+
+
+  }
+
+}
+
+
+
+.logo {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* For mobile phones: */
+  .menu {
+    text-align: center;
+
+    a {
+
       &::before {
-        text-shadow: 3px 3px 5px rgba(128, 226, 90, 0.281);
-        color: green;
-      }
+        content: '';
 
+      }
     }
+
+  }
+  .logo {
+    padding-bottom: 1.5rem;
   }
 }
-
-.menu ul {
-
-  padding-left: 0px !important;
-  text-align: center;
-
-  // border-bottom: 2px dotted red ;
-  // border-bottom: 1px solid black;
-
-}
-.logo{
-    margin-top: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: 0.4rem;
-    font-weight: bolder;
-}
-
