@@ -4,10 +4,13 @@ import { ArticleLandingPageComponent } from './content-pages/article-landing-pag
 import { RouterModule } from '@angular/router';
 import { ArticleHome } from './article-home-page.routing';
 import { GeographicLocationPageComponent } from './content-pages/geographic-location-page/geographic-location-page.component';
+import { HowToReachComponent } from './content-pages/how-to-reach/how-to-reach.component';
+import { FoodCultureComponent } from './content-pages/food-culture/food-culture.component';
+import { SafetyPageComponent } from './content-pages/safety-page/safety-page.component';
 
 
 @NgModule({
-  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent],
+  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(ArticleHome)
