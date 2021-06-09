@@ -105,6 +105,47 @@ header {
   font-weight: bolder;
 }
 
+
+//////////////Search Results
+
+.searchResults {
+  &--expanded {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding: 12px;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.97);
+    border: 1px solid gray;
+    height: 84vh;
+    transition: height 0.6s;
+
+    .searchContent {
+      width: 100%;
+      position: relative;
+      .close_btn {
+        text-align: right;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  &--closed {
+    height: 0vh;
+    z-index: 99;
+    transition: height 0.6s;
+    .searchContent {
+      display: none;
+    }
+
+    //  display: none;
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
 
   /* For mobile phones: */
@@ -120,6 +161,7 @@ header {
     }
 
   }
+
   .logo {
     padding-bottom: 1.5rem;
   }

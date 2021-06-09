@@ -18,15 +18,15 @@
           <a href="#">Contact Us</a>
         </li>
       </ul> -->
-        <div class="col-sm-3" style="padding-bottom: 1.6rem;">  <a href="/home">Home</a> </div>
-        <div class="col-sm-3" style="padding-bottom: 1.6rem;">  <a href="/home">Destinations</a> </div>
-        <div class="col-sm-3" style="padding-bottom: 1.6rem;">  <a href="/home">Terms</a> </div>
-        <div class="col-sm-3" style="padding-bottom: 1.6rem;">  <a href="/home">Contact Us</a> </div>
+      <div class="col-sm-3" style="padding-bottom: 1.6rem;"> <a href="/home">Home</a> </div>
+      <div class="col-sm-3" style="padding-bottom: 1.6rem;"> <a href="/home">Destinations</a> </div>
+      <div class="col-sm-3" style="padding-bottom: 1.6rem;"> <a href="/home">Terms</a> </div>
+      <div class="col-sm-3" style="padding-bottom: 1.6rem;"> <a href="/home">Contact Us</a> </div>
     </div>
     <div class="searchbar col-sm-3 ">
       <div class="input-group">
         <div class="input-group--box">
-          <input style="outline: none;border: none;" placeholder="Search Locations">
+          <input style="outline: none;border: none;" id="search_ip" placeholder="Search Locations"  (input)="onSearch($event.target.value)">
         </div>
         <div class="input-group--icon">
           <span class="material-icons">
@@ -39,4 +39,16 @@
   <div class="content" [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
+</div>
+<!-- ///////////////Search Results  -->
+<div class="searchResults--closed" id="searchBar">
+  <div class="searchContent">
+    <div class="close_btn">
+      <mat-icon  (click)="closeSearch()">clear</mat-icon>
+    </div>
+    <div class="result">
+{{searchMessage}}
+    </div>
+  </div>
+
 </div>
