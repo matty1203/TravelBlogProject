@@ -1,0 +1,22 @@
+.content{
+    position: relative;
+  &--heading{
+    font-size: large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding-top: 2.5%;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding-bottom: 12px;
+    // max-height: 4%;
+}  
+&--sub{
+   
+    padding-top: 8%;
+    line-height: 1.6rem;
+    height: 82vh;
+    overflow-y: auto;
+}
+}
