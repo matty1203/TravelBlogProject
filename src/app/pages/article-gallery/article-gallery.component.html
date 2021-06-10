@@ -1,13 +1,30 @@
-<section style="padding: 1rem;text-align: center;">
- <div class="row">
+<section class="content" style="padding: 1rem;text-align: center;">
+  <div class="row">
     <div *ngFor="let img of images" class="col-sm-3 image">
-      <div class="image-placeholder" [ngStyle]="{'background-image': 'url('+img.url +')'}">
-          <div class="image-footer">{{img?.name}} </div>
+      <div class="image-placeholder">
+        <div class="image-content" [ngStyle]="{'background-image': 'url('+img.url +')'}">
+          <div class="image-footer">
+            <div style="display: flex;">
+              <span>
+                <mat-icon>favorite_border</mat-icon>&nbsp; 200 Likes
+              </span>
+              <span></span>
+            </div>
+
+          </div>
+        </div>
+        <div class="image-placeholder--footer">
+          <p class="image-placeholder--footer--heading" >
+            Photographed By:&nbsp;
+          </p>
+           <p> {{img?.name}}</p>
+        </div>
+
       </div>
     </div>
 
-  </div>   
+  </div>
 </section>
-<footer>
+<!-- <footer>
   <button (click)="home()">Home Check BTN</button>
-</footer>
+</footer> -->

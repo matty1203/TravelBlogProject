@@ -14,7 +14,7 @@ import { ArticleGalleryComponent } from './pages/article-gallery/article-gallery
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     MatToolbarModule,
     MatChipsModule,
+    MatDialogModule,
     NgbModule,
     MatButtonModule,
     MatIconModule,

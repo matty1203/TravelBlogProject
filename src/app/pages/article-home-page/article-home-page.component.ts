@@ -23,7 +23,7 @@ export class ArticleHomePageComponent implements OnInit {
   { id: 3, name: "Food and Culture", url: "/article-home/food-and-culture" },
   { id: 4, name: "Safety", url: "/article-home/safety" },
   { id: 5, name: "Travel Stories", url: "/article-home/travel-stories" },
-  { id: 6, name: "Photo Gallery", url: "/article-home/article-landing" },
+  { id: 6, name: "Photo Gallery", url: "/gallery" },
   { id: 7, name: "Feature Videos", url: "/article-home/article-landing" }]
 
 
@@ -48,7 +48,13 @@ export class ArticleHomePageComponent implements OnInit {
     this.prev_active = id;
     var element = document.getElementById('menu_item' + id);
     element.classList.add("menu--click");
-    this.router.navigate([url])
+    if(id<=5){
+     this.router.navigate([url]) 
+    }
+    else{
+      this.router.navigate([url]) 
+    }
+    
   }
   toLandingPage() {
 

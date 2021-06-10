@@ -1,15 +1,47 @@
 .row {
   width: 100%;
   --bs-gutter-x: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.content {
+  height: 90vh;
+  overflow-y: auto;
 }
 
 .image {
-  padding: 12px;
+  padding: 18px;
 
+  // padding-right: 3rem;
   &-placeholder {
+    padding: 12px;
+    background-color: #343434;
+    border-radius: 24px;
+
+    &--footer {
+      padding-top: 8px;
+      text-align: center;
+      color: white;
+
+      &--heading {
+        font-family: 'Helvetica';
+        font-weight: lighter;
+
+      }
+
+      p {
+        margin: 0px;
+        padding-top: 4px;
+      }
+    }
+  }
+
+  &-content {
     width: 100%;
+    border-radius: inherit;
     position: relative;
-    height: 25vh !important;
+    height: 30vh !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
