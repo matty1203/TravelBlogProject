@@ -15,12 +15,14 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ImageViewerComponent } from './pages/article-gallery/dialog/image-viewer/image-viewer.component';
 @NgModule({
   declarations: [
     AppComponent,
     ArticleHomePageComponent,
     ArticleGalleryComponent,
-    HomePageComponent
+    HomePageComponent,
+    ImageViewerComponent
   ],
   imports: [
     BrowserModule,
