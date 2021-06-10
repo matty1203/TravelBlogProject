@@ -18,7 +18,26 @@
 .close_btn {
   float: right;
   color: white;
-  margin-right: 18px;
+  margin-right: 16px;
   margin-top: 8px;
   cursor: pointer;
+//   padding: 6px;
+}
+
+.footer{
+
+    padding-top: 8px;
+    width: 100%;
+    color: white;
+    display: flex;
+    &-likes{
+        width: 40%;
+        text-transform: uppercase;
+    }
+    &-btn{
+        cursor: pointer;
+        width: 30%;
+        text-align: right;
+        text-transform: uppercase;
+    }
 }
