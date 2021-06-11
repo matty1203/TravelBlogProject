@@ -7,10 +7,11 @@ import { GeographicLocationPageComponent } from './content-pages/geographic-loca
 import { HowToReachComponent } from './content-pages/how-to-reach/how-to-reach.component';
 import { FoodCultureComponent } from './content-pages/food-culture/food-culture.component';
 import { SafetyPageComponent } from './content-pages/safety-page/safety-page.component';
+import { TravelStoriesComponent } from './content-pages/travel-stories/travel-stories.component';
 
 
 @NgModule({
-  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent],
+  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent, TravelStoriesComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(ArticleHome)

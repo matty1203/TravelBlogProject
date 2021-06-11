@@ -1,0 +1,132 @@
+.content {
+  padding-top: 24px;
+  overflow-y: auto;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.row {
+  // height: 86vh;
+  width: 100%;
+  --bs-gutter-x: 0px;
+}
+.main-head{
+ font-size: 2rem;
+ font-weight: bolder;
+ color:#343434 ;
+ margin-bottom: 24px;
+ padding: 1rem;
+}
+.stories {
+  display: flex;
+  width: 100%;
+  //   margin: 1rem;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+
+  &--content {
+    width: 80%;
+    // padding: 12px;
+    box-shadow: 5px 10px 12px 0px #343434a1;
+
+    &-box {
+      // border-radius: 24px;
+      padding: 2rem;
+
+      padding-left: 24px;
+      width: 100%;
+      background-color: #343434;
+      color: white;
+      height: 100%;
+
+      .head1 {
+        font-weight: bold;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: 1s font-size;
+        &:hover{
+            font-size: 1.5rem;
+        }
+      }
+
+      &--content {
+        padding-top: 2rem;
+
+        span {
+          overflow: hidden !important;
+          text-overflow: ellipsis;
+          line-height: 1.6rem;
+          -webkit-line-clamp: 3;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+        }
+
+      }
+    }
+
+
+
+  }
+
+  &--read_more {
+    width: 20%;
+    padding-left: 1.2rem;
+    // padding: 12px;
+
+    .image {
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      .text_field {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        color: white;
+        font-weight: bolder;
+        z-index: 3;
+        text-transform: uppercase;
+        cursor: pointer;
+        //   letter-spacing: 1.3rem;
+      }
+
+      img {
+        position: absolute;
+        border-radius: 24px;
+      }
+
+      &:hover {
+        &::after {
+          background-color: #3434340a;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        z-index: 2;
+        text-align: center;
+        vertical-align: text-bottom;
+        height: inherit;
+        width: inherit;
+        border-radius: 24px;
+        background-color: #34343459;
+        color: white;
+        cursor: pointer;
+        transition: 1s background-color;
+
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .stories--read_more {
+      padding-left: 0px;
+      padding-right: 1rem;
+    }
+  }
+
+
+}

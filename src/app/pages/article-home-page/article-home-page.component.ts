@@ -22,7 +22,7 @@ export class ArticleHomePageComponent implements OnInit {
   { id: 2, name: "How to reach", url: "/article-home/how-to-reach" },
   { id: 3, name: "Food and Culture", url: "/article-home/food-and-culture" },
   { id: 4, name: "Safety", url: "/article-home/safety" },
-  { id: 5, name: "Travel Stories", url: "/article-home/travel-stories" },
+  { id: 5, name: "Travel Stories", url: "/travel-stories" },
   { id: 6, name: "Photo Gallery", url: "/gallery" },
   { id: 7, name: "Feature Videos", url: "/article-home/article-landing" }]
 

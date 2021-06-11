@@ -4,6 +4,7 @@ import { FoodCultureComponent } from "./content-pages/food-culture/food-culture.
 import { GeographicLocationPageComponent } from "./content-pages/geographic-location-page/geographic-location-page.component";
 import { HowToReachComponent } from "./content-pages/how-to-reach/how-to-reach.component";
 import { SafetyPageComponent } from "./content-pages/safety-page/safety-page.component";
+import { TravelStoriesComponent } from "./content-pages/travel-stories/travel-stories.component";
 
 
 export const ArticleHome: Routes = [
@@ -27,5 +28,4 @@ export const ArticleHome: Routes = [
     path:"safety",
     component:SafetyPageComponent
   }
-  
 ];

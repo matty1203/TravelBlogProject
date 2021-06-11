@@ -1,0 +1,35 @@
+<div class="content">
+  <header class="main-head">
+    Travel Stories
+  </header>
+  <div class="stories" *ngFor="let blog of blogs">
+    <div class="stories--content">
+      <div class="stories--content-box">
+        <header class="row">
+          <div class="col-sm-8">
+            <span class="head1">My First Travel Blog</span>
+          </div>
+          <div class="col-sm-4" style="text-align: right;">
+            <span style="font-weight: 200;">Published By Name</span>
+          </div>
+        </header>
+        <section class="stories--content-box--content">
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur varius ipsum,
+            sollicitudin bibendum ligula euismod a. In quis finibus felis, ac fringilla nunc. Maecenas ullamcorper libero
+            non mauris consectetur tempor. Proin fringilla eros lacus, a tincidunt dolor condimentum feugiat. Etiam
+            placerat erat porta, accumsan magna in, consequat mi. Nunc tincidunt luctus est eget dictum. Nunc ac mi
+            lacinia, consequat orci ut, tempor purus. Aliquam rhoncus, enim a egestas egestas, diam sem ultricies mi, non
+            pulvinar dui libero eu ligula. Proin cursus, massa vel tristique volutpat, ex enim dictum diam, a imperdiet
+            sapien quam facilisis purus. Proin nec risus augue.</span>
+        </section>
+      </div>
+    </div>
+    <div class="stories--read_more">
+       <div class="image">
+        <img [src]="blog.thumb_url" height="100%" width="100%">
+        <span class="text_field">Read More</span>
+       </div>
+      
+    </div>
+  </div>
+</div>

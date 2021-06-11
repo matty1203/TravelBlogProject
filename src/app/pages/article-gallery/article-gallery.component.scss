@@ -6,13 +6,19 @@
 }
 
 .content {
-  height: 90vh;
+  height: 91vh;
   overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .image {
-  padding: 18px;
+  padding: 24px;
 
+  // padding-right: 36px;
   // padding-right: 3rem;
   &-placeholder {
     padding: 12px;
@@ -42,7 +48,7 @@
     width: 100%;
     border-radius: inherit;
     position: relative;
-    height: 30vh !important;
+    height: 40vh !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
