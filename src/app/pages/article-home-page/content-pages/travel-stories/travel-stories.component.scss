@@ -4,7 +4,10 @@
   margin-left: 10rem;
   margin-right: 10rem;
 }
-
+.view_content{
+    max-height: 86vh;
+    overflow-y: auto;
+}
 .row {
   // height: 86vh;
   width: 100%;
@@ -16,6 +19,36 @@
  color:#343434 ;
  margin-bottom: 24px;
  padding: 1rem;
+}
+.cover_page{
+ height: 90vh;
+ width: 100%;
+
+}
+.heading_1{
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+}
+.sub_heading_1{
+    padding-top: 12px;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    &--icon_place{
+        text-align: center;
+        &-icon{
+            cursor: pointer;
+        transition: 1s transform;
+        &:hover{
+            transform: scale(1.3);
+        }
+        }
+    }
+  
 }
 .stories {
   display: flex;

@@ -21,5 +21,8 @@ export class TravelStoriesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  toBlogResults(){
+    var elmnt = document.getElementById("blog_content");
+    elmnt.scrollIntoView({behavior: 'smooth' });
+  }
 }

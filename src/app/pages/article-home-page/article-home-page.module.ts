@@ -8,12 +8,14 @@ import { HowToReachComponent } from './content-pages/how-to-reach/how-to-reach.c
 import { FoodCultureComponent } from './content-pages/food-culture/food-culture.component';
 import { SafetyPageComponent } from './content-pages/safety-page/safety-page.component';
 import { TravelStoriesComponent } from './content-pages/travel-stories/travel-stories.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent, TravelStoriesComponent],
   imports: [
     CommonModule,
+    MatIconModule,
     RouterModule.forChild(ArticleHome)
   ]
 })
