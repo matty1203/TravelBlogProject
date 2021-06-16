@@ -1,29 +1,48 @@
-<section class="content" style="padding: 1rem;text-align: center;">
-  <div class="row">
-    <div *ngFor="let img of images" class="col-sm-3 image">
-      <div class="image-placeholder" (click)="openLightBox(img)">
-        <div class="image-content" [ngStyle]="{'background-image': 'url('+img.url +')'}">
-          <div class="image-footer">
-            <div style="display: flex;">
-              <span>
-                <mat-icon>favorite_border</mat-icon>&nbsp; 200 Likes
-              </span>
-              <span></span>
-            </div>
-
-          </div>
-        </div>
-        <div class="image-placeholder--footer">
-          <p class="image-placeholder--footer--heading" >
-            Photographed By:&nbsp;
-          </p>
-           <p> {{img?.name}}</p>
-        </div>
+<section class="content">
+  <div class="cover_page row">
+    <div class="col-sm-6 head-img" style="display: flex;">
+      <img src="./assets/images/camera.png" height="60%" width="75%" style="margin: auto;">
+    </div>
+    <div class="col-sm-6" style="display: flex;">
+      <div style="margin: auto;">
+        <p class="heading_1"> Photo Gallery</p>
+        <p class="sub_heading_1">
+          Scroll Down to View photos
+        </p>
+        <p class="sub_heading_1--icon_place">
+          <mat-icon class="sub_heading_1--icon_place-icon" (click)="toImageGallery()">arrow_drop_down_circle</mat-icon>
+        </p>
 
       </div>
     </div>
-
   </div>
+  <section  style="padding: 1rem;text-align: center;" id="img_starter">
+    <div class="row">
+      <div *ngFor="let img of images" class="col-sm-3 image">
+        <div class="image-placeholder" (click)="openLightBox(img)">
+          <div class="image-content" [ngStyle]="{'background-image': 'url('+img.url +')'}">
+            <div class="image-footer">
+              <div style="display: flex;">
+                <span>
+                  <mat-icon>favorite_border</mat-icon>&nbsp; 200 Likes
+                </span>
+                <span></span>
+              </div>
+
+            </div>
+          </div>
+          <div class="image-placeholder--footer">
+            <p class="image-placeholder--footer--heading">
+              Photographed By:&nbsp;
+            </p>
+            <p> {{img?.name}}</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 </section>
 <!-- <footer>
   <button (click)="home()">Home Check BTN</button>

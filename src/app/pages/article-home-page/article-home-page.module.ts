@@ -9,10 +9,11 @@ import { FoodCultureComponent } from './content-pages/food-culture/food-culture.
 import { SafetyPageComponent } from './content-pages/safety-page/safety-page.component';
 import { TravelStoriesComponent } from './content-pages/travel-stories/travel-stories.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FeaturedVideosComponent } from './content-pages/featured-videos/featured-videos.component';
 
 
 @NgModule({
-  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent, TravelStoriesComponent],
+  declarations: [ArticleLandingPageComponent, GeographicLocationPageComponent, HowToReachComponent, FoodCultureComponent, SafetyPageComponent, TravelStoriesComponent, FeaturedVideosComponent],
   imports: [
     CommonModule,
     MatIconModule,

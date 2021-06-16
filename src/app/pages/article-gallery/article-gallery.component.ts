@@ -44,5 +44,8 @@ export class ArticleGalleryComponent implements OnInit {
     this.dialog.open(ImageViewerComponent, dialogConfig);
   }
 
-
+  toImageGallery(){
+    var elmnt = document.getElementById("img_starter");
+    elmnt.scrollIntoView({behavior: 'smooth' });
+  }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ArticleGalleryComponent } from './pages/article-gallery/article-gallery.component';
 import { ArticleHomePageComponent } from './pages/article-home-page/article-home-page.component';
+import { FeaturedVideosComponent } from './pages/article-home-page/content-pages/featured-videos/featured-videos.component';
 import { TravelStoriesComponent } from './pages/article-home-page/content-pages/travel-stories/travel-stories.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
@@ -27,6 +28,9 @@ const routes: Routes = [{
 },{
   path:"travel-stories",
   component:TravelStoriesComponent
+},{
+  path:"feature-videos",
+  component:FeaturedVideosComponent
 }
 ];
 

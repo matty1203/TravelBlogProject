@@ -24,7 +24,7 @@ export class ArticleHomePageComponent implements OnInit {
   { id: 4, name: "Safety", url: "/article-home/safety" },
   { id: 5, name: "Travel Stories", url: "/travel-stories" },
   { id: 6, name: "Photo Gallery", url: "/gallery" },
-  { id: 7, name: "Feature Videos", url: "/article-home/article-landing" }]
+  { id: 7, name: "Feature Videos", url: "/article-home/feature-videos" }]
 
 
   constructor(private router: Router) {

@@ -26,7 +26,8 @@
     <div class="searchbar col-sm-3 ">
       <div class="input-group">
         <div class="input-group--box">
-          <input style="outline: none;border: none;" id="search_ip" placeholder="Search Locations"  (input)="onSearch($event.target.value)">
+          <input style="outline: none;border: none;" id="search_ip" placeholder="Search Locations"
+            (input)="onSearch($event.target.value)">
         </div>
         <div class="input-group--icon">
           <span class="material-icons">
@@ -44,10 +45,34 @@
 <div class="searchResults--closed" id="searchBar">
   <div class="searchContent">
     <div class="close_btn">
-      <mat-icon  (click)="closeSearch()">clear</mat-icon>
+      <mat-icon (click)="closeSearch()">clear</mat-icon>
     </div>
+    <header class="result_header">Search Results</header>
     <div class="result">
-{{searchMessage}}
+      <!-- {{searchMessage}} -->
+      
+        <section class="result_content row" *ngFor="let result of results">
+          <section class="col-sm-10">
+            <header class="result_content--header ">
+              <div style="text-transform: uppercase;">{{result?.name}}</div>
+            </header>
+            <section class="result_content--menu ">
+              <div class="row">
+                <section class="col-sm-4 result_content--menu_item " *ngFor="let item of menu">
+                  <span>{{item?.name}}</span>
+                </section>
+              </div>
+            </section>
+          </section>
+          <section class="col-sm-2 result_img">
+            <div [ngStyle]="{'background-image': 'url(' + result.img_url + ')'}">
+              <!-- <img [src]="result?.img_url" height="100%" width="100%"> -->
+
+            </div>
+          </section>
+        </section>
+
+
     </div>
   </div>
 

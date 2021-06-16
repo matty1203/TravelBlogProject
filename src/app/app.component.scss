@@ -30,9 +30,11 @@ header {
       border: 1px solid black;
       padding: 2px;
       border-radius: 24px;
-      max-width:  75%;
+      max-width: 75%;
+
       &--box {
         width: 85%;
+
         input {
           margin-left: 4px;
         }
@@ -124,6 +126,7 @@ header {
     .searchContent {
       width: 100%;
       position: relative;
+
       .close_btn {
         text-align: right;
         cursor: pointer;
@@ -136,6 +139,7 @@ header {
     height: 0vh;
     z-index: 99;
     transition: height 0.6s;
+
     .searchContent {
       display: none;
     }
@@ -144,6 +148,95 @@ header {
   }
 }
 
+.result {
+  // height:100px;
+  height: 75vh;
+  overflow: scroll !important;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_header {
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+  }
+
+  // &__container{
+  //   height:100px;
+  //   overflow: scroll!important;
+  // }
+  &_img {
+    padding: 1rem 1rem 0rem 1rem;
+
+    div {
+      border: 8px solid #343434;
+      border-radius: 24px;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &_content {
+    overflow-y: auto;
+    margin-top: 1rem;
+
+    &--header {
+      padding-top: 1rem;
+      display: inline-block;
+
+      div {
+        padding: 1rem;
+        background-color: #343434;
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 0.3rem;
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 4rem;
+      }
+    }
+
+    &--menu {
+      padding: 8px;
+
+      div {
+        padding: 1rem;
+        background-color: #343434;
+        border-radius: 18px;
+      }
+
+      &_item {
+        color: white;
+        padding: 0.45rem;
+        text-transform: uppercase;
+
+        // &:not(:last-child){
+        //   border-right: 1px solid white;
+        // }
+        span {
+          cursor: pointer;
+          transition: 1s color;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.466);
+            font-weight: bolder;
+          }
+        }
+
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 768px) {
 
