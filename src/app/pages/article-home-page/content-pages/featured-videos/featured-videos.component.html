@@ -1,1 +1,53 @@
-<p>featured-videos works!</p>
+<section class="content">
+  <div class="cover_page row">
+    <div class="col-sm-6 head-img" style="display: flex;">
+      <img src="./assets/images/videos.png" height="60%" width="90%" style="margin: auto;">
+    </div>
+    <div class="col-sm-6" style="display: flex;">
+      <div style="margin: auto;">
+        <p class="heading_1"> Featured Videos</p>
+        <p class="sub_heading_1">
+          Scroll Down to Watch Videos
+        </p>
+        <p class="sub_heading_1--icon_place">
+          <mat-icon class="sub_heading_1--icon_place-icon" (click)="toImageGallery()">arrow_drop_down_circle</mat-icon>
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <section style="padding: 1rem;text-align: center;" id="video_starter">
+    <div class="row">
+      <div *ngFor="let vid of videos" class="col-sm-4 image">
+        <div class="image-placeholder" (click)="openLightBox(vid)">
+          <div class="image-content">
+            <iframe [src]='sanitizeURL(vid.url)' frameborder="0" allowfullscreen
+              style="position:absolute;top:0;left:0;width:100%;height:100%; border-radius: inherit;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+
+            <!-- <div class="image-footer">
+              <div style="display: flex;">
+                <span>
+                  <mat-icon>favorite_border</mat-icon>&nbsp; 200 Likes
+                </span>
+                <span></span>
+              </div>
+
+            </div> -->
+          </div>
+          <div class="image-placeholder--footer">
+            <p class="image-placeholder--footer--heading">
+              Uploaded By:&nbsp;
+            </p>
+            <p> {{vid?.upload_name}}</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</section>
+<!-- <footer>
+    <button (click)="home()">Home Check BTN</button>
+  </footer> -->

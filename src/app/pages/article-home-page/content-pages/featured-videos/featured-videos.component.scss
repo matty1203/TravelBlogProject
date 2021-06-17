@@ -1,0 +1,120 @@
+.row {
+    width: 100%;
+    --bs-gutter-x: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  
+  .content {
+    height: 91vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .image {
+    padding: 24px;
+  
+    // padding-right: 36px;
+    // padding-right: 3rem;
+    &-placeholder {
+      padding: 12px;
+      background-color: #343434;
+      border-radius: 24px;
+      cursor: pointer;
+  
+      &--footer {
+        padding-top: 8px;
+        text-align: center;
+        color: white;
+  
+        &--heading {
+          font-family: 'Helvetica';
+          font-weight: lighter;
+  
+        }
+  
+        p {
+          margin: 0px;
+          padding-top: 4px;
+        }
+      }
+    }
+  
+    &-content {
+      width: 100%;
+      border-radius: inherit;
+      position: relative;
+      height: 40vh !important;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      // background-image: url("https://i.pinimg.com/originals/83/64/66/83646654668bf9ae412f45bb2e417ddf.jpg");
+    }
+  
+    &-footer {
+      text-align: left;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      padding: 6px;
+      color: white;
+      background-color: rgba(65, 63, 63, 0.377);
+    }
+  }
+  
+  
+  ///////////////////Cover Page
+  
+  
+  
+  .main-head {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #343434;
+    margin-bottom: 24px;
+    padding: 1rem;
+  }
+  
+  .cover_page {
+    height: 90vh;
+    width: 100%;
+  
+  }
+  
+  .heading_1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  
+  .sub_heading_1 {
+    padding-top: 12px;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  
+    &--icon_place {
+      text-align: center;
+  
+      &-icon {
+        cursor: pointer;
+        transition: 1s transform;
+  
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  
+  }
+
+

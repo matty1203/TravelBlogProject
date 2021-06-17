@@ -16,6 +16,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ImageViewerComponent } from './pages/article-gallery/dialog/image-viewer/image-viewer.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ImageViewerComponent } from './pages/article-gallery/dialog/image-viewe
   ],
   imports: [
     BrowserModule,
+    YouTubePlayerModule,
     AppRoutingModule,
     MatToolbarModule,
     MatChipsModule,
