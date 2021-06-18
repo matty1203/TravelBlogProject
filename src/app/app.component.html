@@ -1,9 +1,9 @@
 <div class="wrapper">
-  <header class="row">
-    <div class="col-sm-3 logo" style="display: flex;">
-      <span style="margin-top:auto ;margin-bottom: auto;">COMPANY</span>
+  <header class="row" style="padding-top: 1%;">
+    <div class="col-sm-2 logo" style="display: flex;">
+      <span style="margin-top:auto ;margin-bottom: auto;margin-left: 1rem;">COMPANY</span>
     </div>
-    <div class="menu col-sm-6 row">
+    <div class="menu col-sm-5 row">
       <!-- <ul>
         <li>
           <a href="/home">Home</a>
@@ -36,6 +36,10 @@
         </div>
       </div>
     </div>
+    <div class="col-sm-1"style="display: flex;">
+      <!-- <span style="margin-top:auto ;margin-bottom: auto;margin-left: 1rem;">COMPANY</span> -->
+    <button mat-button class="login_btn">Login</button>
+    </div>
   </header>
   <div class="content" [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
@@ -50,27 +54,27 @@
     <header class="result_header">Search Results</header>
     <div class="result">
       <!-- {{searchMessage}} -->
-      
-        <section class="result_content row" *ngFor="let result of results">
-          <section class="col-sm-10">
-            <header class="result_content--header ">
-              <div style="text-transform: uppercase;">{{result?.name}}</div>
-            </header>
-            <section class="result_content--menu ">
-              <div class="row">
-                <section class="col-sm-4 result_content--menu_item " *ngFor="let item of menu">
-                  <span>{{item?.name}}</span>
-                </section>
-              </div>
-            </section>
-          </section>
-          <section class="col-sm-2 result_img">
-            <div [ngStyle]="{'background-image': 'url(' + result.img_url + ')'}">
-              <!-- <img [src]="result?.img_url" height="100%" width="100%"> -->
 
+      <section class="result_content row" *ngFor="let result of results">
+        <section class="col-sm-10">
+          <header class="result_content--header ">
+            <div style="text-transform: uppercase;">{{result?.name}}</div>
+          </header>
+          <section class="result_content--menu ">
+            <div class="row">
+              <section class="col-sm-4 result_content--menu_item " *ngFor="let item of menu">
+                <span>{{item?.name}}</span>
+              </section>
             </div>
           </section>
         </section>
+        <section class="col-sm-2 result_img">
+          <div [ngStyle]="{'background-image': 'url(' + result.img_url + ')'}">
+            <!-- <img [src]="result?.img_url" height="100%" width="100%"> -->
+
+          </div>
+        </section>
+      </section>
 
 
     </div>
