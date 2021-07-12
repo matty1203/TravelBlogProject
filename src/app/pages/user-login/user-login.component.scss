@@ -52,12 +52,28 @@
       margin: auto;
       height: 60%;
       width: 80%;
-      //  background-image: url('../assets/images/login.png');
-      //   background: url('/app/assets/images/login.png');
-      // background-color: yellow;
       background-repeat: no-repeat;
       background-size: cover;
     }
 
   }
 }
+
+
+// MEdia Query ot completed
+
+@media only screen and (max-width: 600px) {
+    .login {
+        &-form {
+          width: 100%;
+      
+          &--box {
+              padding: 12px;
+           
+      
+          }
+        }
+      
+       
+      }
+  }
