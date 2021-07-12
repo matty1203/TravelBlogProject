@@ -5,6 +5,7 @@ import { ArticleHomePageComponent } from './pages/article-home-page/article-home
 import { FeaturedVideosComponent } from './pages/article-home-page/content-pages/featured-videos/featured-videos.component';
 import { TravelStoriesComponent } from './pages/article-home-page/content-pages/travel-stories/travel-stories.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { UserLoginComponent } from './pages/user-login/user-login.component';
 
 const routes: Routes = [{
   path:'',
@@ -31,6 +32,9 @@ const routes: Routes = [{
 },{
   path:"feature-videos",
   component:FeaturedVideosComponent
+},{
+  path:"login-page",
+  component:UserLoginComponent
 }
 ];
 

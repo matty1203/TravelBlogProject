@@ -1,7 +1,7 @@
 <div class="wrapper">
   <header class="row" style="padding-top: 1%;">
     <div class="col-sm-2 logo" style="display: flex;">
-      <span style="margin-top:auto ;margin-bottom: auto;margin-left: 1rem;">COMPANY</span>
+      <span style="margin:auto;">COMPANY</span>
     </div>
     <div class="menu col-sm-5 row">
       <!-- <ul>
@@ -36,9 +36,9 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-1"style="display: flex;">
+    <div class="col-sm-2"style="display: flex;">
       <!-- <span style="margin-top:auto ;margin-bottom: auto;margin-left: 1rem;">COMPANY</span> -->
-    <button mat-button class="login_btn">Login</button>
+    <button mat-button class="login_btn" (click)="toLoginPage()">Login</button>
     </div>
   </header>
   <div class="content" [@routeAnimations]="prepareRoute(outlet)">

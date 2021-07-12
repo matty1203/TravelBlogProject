@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { slideInAnimation } from './animation'
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,8 @@ export class AppComponent {
   { id: 4, name: "Safety", url: "/article-home/safety" },
   { id: 5, name: "Travel Stories", url: "/travel-stories" },
   { id: 6, name: "Photo Gallery", url: "/gallery" },
-  { id: 7, name: "Feature Videos", url: "/article-home/article-landing" }]
+  { id: 7, name: "Feature Videos", url: "/article-home/article-landing"},
+]
 
   results: any = [{ id: 1, img_url: "https://www.irishtimes.com/polopoly_fs/1.4513148.1616011727!/image/image.jpg_gen/derivatives/landscape_490/image.jpg", name: "Estonia" },
   { id: 2, img_url: "https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg", name: "Croatia" },
@@ -33,6 +34,9 @@ export class AppComponent {
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
+  constructor(private router:Router){
+
   }
   onSearch(searchKey) {
    
@@ -65,6 +69,10 @@ export class AppComponent {
       element1.classList.toggle("searchResults--closed"); 
     }
    
+  }
+  toLoginPage(){
+
+    this.router.navigate(['/login-page'])
   }
 
 

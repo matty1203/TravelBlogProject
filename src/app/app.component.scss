@@ -238,15 +238,20 @@ header {
   }
 }
 .login_btn{
-  margin-top:auto ;
-  margin-bottom: auto;
-  margin-left: 0;
-  margin-right: 1rem;
+ margin: auto;
+  // margin-right: 1rem;
   text-transform: uppercase;
   border-radius: 24px;
   padding:4px;
-  background-color: violet;
-  text-align: right;
+  width: 50%;
+  letter-spacing: 2px;
+  background-color: rgb(113, 18, 180);
+  color: white;
+  text-align: center;
+  font-size: large;
+  &:active{
+   transform: scale(0.98);
+  }
 
 }
 @media only screen and (max-width: 768px) {

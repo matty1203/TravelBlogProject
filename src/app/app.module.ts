@@ -17,13 +17,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ImageViewerComponent } from './pages/article-gallery/dialog/image-viewer/image-viewer.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { UserLoginComponent } from './pages/user-login/user-login.component';
 @NgModule({
   declarations: [
     AppComponent,
     ArticleHomePageComponent,
     ArticleGalleryComponent,
     HomePageComponent,
-    ImageViewerComponent
+    ImageViewerComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
